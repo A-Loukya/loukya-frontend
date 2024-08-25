@@ -15,7 +15,10 @@ function App() {
     e.preventDefault();
     try {
       const parsedData = JSON.parse(jsonInput);
-      const res = await axios.post("https://bajajtask-seven.vercel.app/bfhl", parsedData);
+      const res = await axios.post(
+        "bajajtask-loukya.vercel.app/bfhl",
+        parsedData
+      );
       setResponse(res.data);
     } catch (error) {
       console.error("Invalid JSON or API error", error);
